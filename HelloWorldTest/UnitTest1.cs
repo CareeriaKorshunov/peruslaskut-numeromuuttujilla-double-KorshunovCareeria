@@ -67,13 +67,7 @@ Assert.True(LineContainsIgnoreSpaces(resultLines[4], "1,9090909"),
                 cancellationTokenSource.Dispose();
             }
         }
-        private bool LineContainsIgnoreSpaces(string line, string expectedText)
-        {
-            // Remove all whitespace from the line and the expected text
-            string normalizedLine = Regex.Replace(line, @"\s+", "");
-            string normalizedExpectedText = Regex.Replace(expectedText, @"\s+", "");
-            return normalizedLine.Contains(normalizedExpectedText);
-        }
+
 
         private int CountWords(string line)
         {
